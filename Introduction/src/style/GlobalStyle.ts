@@ -86,7 +86,6 @@ export const reset = css`
     padding: 0;
     border: 0;
     font-size: 100%;
-    font: inherit;
     vertical-align: baseline;
   }
   /* HTML5 display-role reset for older browsers */
@@ -127,5 +126,9 @@ export const reset = css`
   }
   li {
     list-style: none;
+  }
+  * {
+    @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+    font-family: "Roboto Mono", monospace;
   }
 `;
