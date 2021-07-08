@@ -1,18 +1,45 @@
 import * as S from "./styles";
+import { Fragment, useState } from "react";
 import semicolonMap from "../../assets/images/semicolon-map.png";
-import github from "../../assets/images/github-logo.png";
-import { Fragment } from "react";
-const Header = (): JSX.Element => {
+import { Link } from "react-router-dom";
+const Header = ({}): JSX.Element => {
+  const [state, setState] = useState<any>({
+    initial: false,
+    clicked: null,
+    menuName: "Menu",
+  });
+  const [disabled, setDisabled] = useState<boolean>(false);
+  const handleMenu = () => {
+    if (state.initial === false) {
+      setState({
+        initial: null,
+        clicked: true,
+        menuName: "Close",
+      });
+    } else if (state.clicked === true) {
+      setState({
+        clicked: !state.clicked,
+        menuName: "Menu",
+      });
+    } else if (state.clicked === false) {
+      setState({
+        clicked: !state.clicked,
+        menuName: "Close",
+      });
+    }
+  };
+
   return (
     <Fragment>
       <S.HeaderContainer>
-        <S.Logo>
-          <img src={semicolonMap} />
-          <div>SEMICOLON;</div>
-        </S.Logo>
-        <S.Github href="https://github.com/semicolonDSM" target="_blank">
-          <img src={github} />
-        </S.Github>
+        <Link to="/" style={{textDecoration: "none"}}>
+          <S.Logo >
+            <img src={semicolonMap} />
+            <div>SEMICOLON;</div>
+          </S.Logo>
+        </Link>
+
+        <S.HamburgerBar onClick={handleMenu}>{state.menuName}</S.HamburgerBar>
       </S.HeaderContainer>
     </Fragment>
   );

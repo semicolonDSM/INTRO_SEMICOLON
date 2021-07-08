@@ -128,7 +128,9 @@ export const reset = css`
     list-style: none;
   }
   * {
-    @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
-    font-family: "Roboto Mono", monospace;
+    @import url("https://fonts.googleapis.com/css2?family=Hi+Melody&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100&display=swap");
+    /* font-family: "Hi Melody", cursive; */
+    font-family: "Nanum Pen Script", cursive;
+    /* font-family: "Noto Sans KR", sans-serif; */
   }
 `;
