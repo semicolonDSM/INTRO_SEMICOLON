@@ -130,7 +130,12 @@ export const reset = css`
   * {
     @import url("https://fonts.googleapis.com/css2?family=Hi+Melody&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100&display=swap");
     /* font-family: "Hi Melody", cursive; */
-    font-family: "Nanum Pen Script", cursive;
+    /* font-family: "Nanum Pen Script", cursive; */
     /* font-family: "Noto Sans KR", sans-serif; */
+    @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,600,800&display=swap");
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    
   }
 `;

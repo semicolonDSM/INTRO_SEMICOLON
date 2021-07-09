@@ -1,14 +1,23 @@
 import * as S from "./styles";
-import { Fragment, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import semicolonMap from "../../assets/images/semicolon-map.png";
-import { Link } from "react-router-dom";
-const Header = ({}): JSX.Element => {
+import { Link, withRouter } from "react-router-dom";
+import Hamburger from "../Hamburger/Hamburger";
+
+const Header = ({history}:any): JSX.Element => {
   const [state, setState] = useState<any>({
     initial: false,
     clicked: null,
     menuName: "Menu",
   });
   const [disabled, setDisabled] = useState<boolean>(false);
+
+  useEffect(() => {
+    history.listen(() => {
+      setState({clicked: false, menuName: "Menu"})
+    })
+  })
+
   const handleMenu = () => {
     if (state.initial === false) {
       setState({
@@ -34,15 +43,15 @@ const Header = ({}): JSX.Element => {
       <S.HeaderContainer>
         <Link to="/" style={{textDecoration: "none"}}>
           <S.Logo >
-            <img src={semicolonMap} />
+            {/* <img src={semicolonMap} /> */}
             <div>SEMICOLON;</div>
           </S.Logo>
         </Link>
-
         <S.HamburgerBar onClick={handleMenu}>{state.menuName}</S.HamburgerBar>
       </S.HeaderContainer>
+      <Hamburger state={state}/>
     </Fragment>
   );
 };
 
-export default Header;
+export default withRouter(Header);
