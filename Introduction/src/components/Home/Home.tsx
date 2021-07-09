@@ -6,7 +6,9 @@ const Home = (): JSX.Element => {
   return (
     <Fragment>
       <S.HomeContainer>
-        <S.ClubMainText>진리를 찾은자, 자유를 얻으라 👀</S.ClubMainText>
+        <S.ClubMainText>
+          <b>SEMICOLON</b>&nbsp;is a CLUB
+        </S.ClubMainText>
       </S.HomeContainer>
     </Fragment>
   );

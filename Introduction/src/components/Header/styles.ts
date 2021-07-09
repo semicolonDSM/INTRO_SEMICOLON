@@ -1,6 +1,4 @@
-import { COLOR } from './../../style/index';
 import styled from "@emotion/styled";
-
 //헤더
 export const HeaderContainer = styled.div`
   height: 70px;
@@ -18,10 +16,11 @@ export const Logo = styled.div`
   font-size: 20px;
   font-weight: 700;
   cursor: pointer;
-  color: black;
+  color: ${({ color }) => color};
   img {
-    width: 64px;
-    height: 64px;
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
     z-index: 10;
   }
 
@@ -30,9 +29,12 @@ export const Logo = styled.div`
   }
 `;
 
-export const HamburgerBar = styled.div`
+export const HamburgerBar = styled.button`
+  color: ${({ color }) => color};
   font-size: 15px;
-  width: 30px;
+  font-weight: 600;
   cursor: pointer;
   z-index: 10;
+  background: none;
+  border: none;
 `;

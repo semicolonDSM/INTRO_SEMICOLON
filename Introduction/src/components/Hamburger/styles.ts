@@ -28,13 +28,11 @@ export const MenuSecondaryBackgroundColor = styled.div`
 
 export const MenuLayer = styled.div`
   display: flex;
-  background-color: ${COLOR.purple200};
+  background-color: ${COLOR.purple100};
   height: 100%;
   width: 100%;
   /* justify-content: space-between; */
 `;
-
-export const Container = styled.div``;
 
 export const MenuLinks = styled.div`
   height: 100%;
@@ -44,15 +42,21 @@ export const MenuLinks = styled.div`
 export const UnorderedList = styled.ul``;
 
 export const List = styled.li`
-    margin: 30px;
+  height: 140px;
+  margin: 30px;
+  overflow: hidden;
   a {
+    width: 100%;
+    height: 100%;
     text-decoration: none;
     color: white;
-    font-size: 120px;
+    font-size: 90px;
     font-weight: 700;
     font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI",
       Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
       sans-serif;
-    /* -webkit-text-stroke: 1px black; */
+    &:hover {
+      color: ${COLOR.black};
+    }
   }
 `;

@@ -5,6 +5,9 @@ import { COLOR } from "../../style";
 export const HomeContainer = styled.div`
   overflow: hidden;
   display: block;
+  height: 80vh;
+  /* height: 100%; */
+  /* background-color: black; */
 `;
 
 export const ClubMainText = styled.div`
@@ -12,5 +15,5 @@ export const ClubMainText = styled.div`
   font-size: 80px;
   margin-left: 140px;
   margin-top: 300px;
-  font-family: "Nanum Pen Script", cursive;
+  /* font-family: "Nanum Pen Script", cursive; */
 `;
