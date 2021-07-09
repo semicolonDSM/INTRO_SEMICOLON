@@ -19,6 +19,7 @@ const Hamburger = ({ state }: any): JSX.Element => {
         css: {display: "none"}
       })   
       gsap.to([revealMenu.current, revealMenuBackground.current], {
+        delay: .1,
         duration: 0.8,
         height: 0,
         ease: 'power3.inOut',
