@@ -24,7 +24,7 @@ const Hamburger = ({ state }: any): JSX.Element => {
         height: 0,
         ease: 'power3.inOut',
         stagger: {
-          amount: 0.07
+          amount: 0.06
         }
       });
       gsap.to(menu.current, {
@@ -49,6 +49,7 @@ const Hamburger = ({ state }: any): JSX.Element => {
         delay: 0,
         opacity: 1,
         height: "100%",
+        
       });
       gsap.from([revealMenuBackground.current, revealMenu.current], {
         duration: 0.8,
@@ -57,7 +58,7 @@ const Hamburger = ({ state }: any): JSX.Element => {
         ease: "power3.inOut",
         skewY: 3,
         stagger: {
-          amount: 0.07,
+          amount: 0.06,
         },
       });
       gsap.from([nav1.current, nav2.current, nav3.current], {

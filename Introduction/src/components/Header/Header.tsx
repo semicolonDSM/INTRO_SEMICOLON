@@ -56,7 +56,7 @@ const Header = ({ history }: any): JSX.Element => {
     setDisabled(true);
     setTimeout(() => {
       setDisabled(false);
-    }, 1200);
+    }, 1000);
   };
 
   return (

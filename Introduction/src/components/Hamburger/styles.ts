@@ -14,7 +14,7 @@ export const HamburgerMenu = styled.div`
 `;
 
 export const MenuSecondaryBackgroundColor = styled.div`
-  background-color: ${COLOR.black};
+  background: ${COLOR.purple200};
   position: fixed;
   top: 0;
   bottom: 0;
@@ -28,10 +28,9 @@ export const MenuSecondaryBackgroundColor = styled.div`
 
 export const MenuLayer = styled.div`
   display: flex;
-  background-color: ${COLOR.purple100};
+  background-color: black;
   height: 100%;
   width: 100%;
-  /* justify-content: space-between; */
 `;
 
 export const MenuLinks = styled.div`
@@ -56,7 +55,9 @@ export const List = styled.li`
       Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
       sans-serif;
     &:hover {
-      color: ${COLOR.black};
+      /* color: ${COLOR.purple400}; */
+      /* text-shadow: -2px 0 #ff52f7, 0 2px #ff52f7, 2px 0 #ff52f7, 0 -2px #ff52f7; */
+
     }
   }
 `;

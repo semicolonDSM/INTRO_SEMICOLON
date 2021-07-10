@@ -11,5 +11,6 @@ export const COLOR = {
   purple200: "#713EFF",
   purple300: "#350871",
   purple400: "#7b1acf",
+  purple500: "rgb(123, 26, 207)",
   yellow: "#FFE874",
 };
