@@ -2,6 +2,7 @@ import * as S from "./styles";
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
+import { hoverAnimation, hoverExitAnimation } from "./animations";
 
 const Hamburger = ({ state }: any): JSX.Element => {
   let menu = useRef<any>(null);
@@ -73,25 +74,7 @@ const Hamburger = ({ state }: any): JSX.Element => {
       })
     }
   }, [state]);
-
-  const hoverAnimation = (e:any) => {
-    gsap.to(e.target.parentNode, {
-      duration: .1,
-      y: 3,
-      skewX: 4,
-      ease: 'power3.inOut'
-    })
-  }
-
-  const hoverExitAnimation = (e:any) => {
-    gsap.to(e.target.parentNode, {
-      duration: .1,
-      y: -3,
-      skewX: 0,
-      ease: "power3.inOut"
-    })
-  }
-
+  
   return (
     <S.HamburgerMenu ref={menu}>
       <S.MenuSecondaryBackgroundColor ref={revealMenuBackground} />
