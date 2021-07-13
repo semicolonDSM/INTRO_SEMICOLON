@@ -1,4 +1,4 @@
-import { COLOR } from "./../../style/index";
+import { COLOR } from "../../style/index";
 import styled from "@emotion/styled";
 
 export const HamburgerMenu = styled.div`

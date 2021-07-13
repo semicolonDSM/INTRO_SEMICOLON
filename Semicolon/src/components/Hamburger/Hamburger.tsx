@@ -1,5 +1,5 @@
 import * as S from "./styles";
-import { useEffect, useRef } from "react";
+import { MutableRefObject, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import {
   hoverAnimation,
@@ -12,16 +12,16 @@ import {
   revealHamburgerMenuBackground,
   revealHamburgerMenuBackgroundSetting,
   revealNavBar,
-} from "./animations";
+} from "../../animation/animations";
 
 const Hamburger = ({ state }: any): JSX.Element => {
-  let menu = useRef<any>(null);
-  let revealMenu = useRef(null);
-  let revealMenuBackground = useRef<any>(null);
-  let menuLinks = useRef<any>(null);
-  let nav1 = useRef<any>(null);
-  let nav2 = useRef<any>(null);
-  let nav3 = useRef<any>(null);
+  let menu:MutableRefObject<any> = useRef(null);
+  let revealMenu:MutableRefObject<any> = useRef(null);
+  let revealMenuBackground:MutableRefObject<any> = useRef(null);
+  let menuLinks:MutableRefObject<any> = useRef(null);
+  let nav1:MutableRefObject<any> = useRef(null);
+  let nav2:MutableRefObject<any> = useRef(null);
+  let nav3:MutableRefObject<any> = useRef(null);
 
   useEffect(() => {
     if (state.clicked === false) {
